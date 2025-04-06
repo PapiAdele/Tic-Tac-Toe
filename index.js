@@ -1,6 +1,6 @@
 let boxes = document.querySelectorAll(".box");
 
-let turn = "X";
+let turn = "Adele";
 let isGameOver = false;
 
 boxes.forEach(e =>{
@@ -16,12 +16,12 @@ boxes.forEach(e =>{
 })
 
 function changeTurn(){
-    if(turn === "X"){
-        turn = "O";
+    if(turn === "Adele"){
+        turn = "Ebube";
         document.querySelector(".bg").style.left = "85px";
     }
     else{
-        turn = "X";
+        turn = "Adele";
         document.querySelector(".bg").style.left = "0";
     }
 }
@@ -41,7 +41,7 @@ function checkWin(){
 
         if (v0 != "" && v0 === v1 && v0 === v2){
         isGameOver = true;
-        document.querySelector("#results").innerHTML = turn + "win";
+        document.querySelector("#results").innerHTML = turn + " won";
         document.querySelector("#play-again").style.display = "inline";
 
 
@@ -71,7 +71,7 @@ function checkDraw(){
 
 document.querySelector("#play-again").addEventListener("click", ()=> {
     isGameOver = false;
-    turn ="X";
+    turn ="Adele";
     document.querySelector(".bg").style.left = "0";
     document.querySelector("#results").innerHTML = "";
     document.querySelector("#play-again").style.display = "none";
